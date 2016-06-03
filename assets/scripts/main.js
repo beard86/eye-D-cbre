@@ -132,16 +132,22 @@ var wW, wH;
               if(videoCtrl.attr('data-ctrl') === 'play') {
                 videoCtrl.attr('data-ctrl','pause');
                 video.play();
-                videoCtrl.find('#label').text('PAUSE VIDEO');
-                videoCtrl.find('#icon').removeClass('icon-play').addClass('icon-pause');
+                videoCtrl.fadeOut(100,function() {
+                  $(this).find('#label').text('PAUSE VIDEO'),
+                  $(this).fadeIn(100);
+                  videoCtrl.find('#icon').removeClass('icon-play').addClass('icon-pause');
+                });
                 return;
               }
 
               if(videoCtrl.attr('data-ctrl') === 'pause') {
                 videoCtrl.attr('data-ctrl','play');
                 video.pause();
-                videoCtrl.find('#label').text('PLAY VIDEO');
-                videoCtrl.find('#icon').removeClass('icon-pause').addClass('icon-play');
+                videoCtrl.fadeOut(100,function() {
+                  $(this).find('#label').text('PLAY VIDEO'),
+                  $(this).fadeIn(100);
+                  videoCtrl.find('#icon').removeClass('icon-pause').addClass('icon-play');
+                });
                 return;
               }
 

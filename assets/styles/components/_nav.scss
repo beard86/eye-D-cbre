@@ -1,10 +1,17 @@
 /*Toggle Menu*/
 .toggle-menu-wrap {
     position: absolute;
+    top: 10%;
     right: 15px;
     display: none;
     @include breakpoint(mobileonly) {
         display: block;
+    }
+    @include breakpoint(tablet) {
+        display: block;
+    }
+    @include breakpoint(laptop) {
+        display: none;
     }
 }
 /* Icon 4 */
