@@ -1,0 +1,36 @@
+#disclaimers,
+#contact {
+	@include breakpoint(mobileonly) {
+		text-align:center;
+	}
+	.col-md-3.hr:after {
+		@include breakpoint(mobileonly) {
+			transform: translateX(-50%);
+		}
+
+	}
+}
+
+#hero {
+    max-height: 500px;
+    background: $grey;
+    @include breakpoint(widescreen) {
+	    max-height: 700px;
+    }
+    overflow: hidden;
+    img {
+    	width:100%;
+    	@include breakpoint(widescreen) {
+			//transform: translateY(-990px);
+    	}
+    }
+}
+
+#the-offer>.container {
+	.row {
+		@include breakpoint(mobileonly) {
+			padding: 15px 15px 50px;
+		}
+	}
+
+}

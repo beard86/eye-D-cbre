@@ -1,0 +1,41 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #e95a13;
+$black:         		#000;
+$white:         		#fff;
+$grey:					#bcbdc1;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+   @if $point == widescreen {
+     @media (min-width: 120.063em) { @content ; }
+  }
+  @else if $point == tallwide {
+    @media (min-width: 50em) and (min-height: 60em) { @content ; }
+  }
+   @else if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }/* (OVER 1440px) */
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }/* (OVER 768px) */
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }/* (UNDER 768px) */
+
+  }
+}
